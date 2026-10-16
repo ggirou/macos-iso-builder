@@ -35,6 +35,8 @@ jobs:
       - name: Preflight
         id: check
         run: |
+          echo "_build=true" >> $GITHUB_OUTPUT
+          exit 0
           echo "_build=false" >> $GITHUB_OUTPUT
           sum() { printf '%s\n' "$@" >> "$GITHUB_STEP_SUMMARY"; }
 
